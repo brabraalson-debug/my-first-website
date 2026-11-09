@@ -26,11 +26,11 @@
       .hero {
         max-width: 1200px;
         margin: 0 auto;
-        min-height: 75svh;
+        min-height: 62svh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 72px 0;
+        padding: 64px 0;
       }
       h1 {
         font-family: Georgia, 'Times New Roman', serif;
@@ -62,9 +62,9 @@
         color: #b6b7ae;
         font-size: 12px;
       }
-      .work { max-width: 1200px; margin: 0 auto; padding: 48px 0 96px; border-top: 1px solid #3a3b36; }
+      .work { max-width: 1200px; margin: 0 auto; padding: 40px 0 64px; border-top: 1px solid #3a3b36; }
       h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(32px, 5vw, 56px); margin: 0 0 16px; letter-spacing: -0.03em; }
-      .project-meta { color: #b6b7ae; font-size: 14px; line-height: 1.6; margin: 0 0 32px; }
+      .project-meta { color: #b6b7ae; font-size: 14px; line-height: 1.6; margin: 0 0 24px; }
       .project-image { display: block; }
       .project-image img { display: block; width: 100%; height: auto; }
       .project-description { color: #b6b7ae; font-size: 17px; line-height: 1.7; max-width: 620px; margin: 28px 0 20px; }
@@ -72,9 +72,9 @@
       a:focus-visible { outline: 2px solid #c7b58b; outline-offset: 6px; }
 
       .gallery-hint { color: #b6b7ae; font-size: 13px; line-height: 1.7; margin: 0 0 16px; }
-      .gallery-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #77796d #262724; overscroll-behavior-x: contain; }
+      .gallery-track { display: flex; align-items: flex-start; overflow-y: hidden; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #77796d #262724; overscroll-behavior-x: contain; }
       .gallery-slide { flex: 0 0 100%; min-width: 0; margin: 0; scroll-snap-align: start; scroll-snap-stop: always; }
-      .gallery-slide a { display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 3; background: #e2e4e1; }
+      .gallery-slide a { display: flex; align-items: center; justify-content: center; width: 100%; max-height: 68svh; background: #151615; }
       .gallery-slide img { display: block; max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; }
       .gallery-slide figcaption { padding: 16px 0; font-size: 14px; color: #b6b7ae; }
       .gallery-controls { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 16px; }
@@ -84,7 +84,7 @@
       .gallery-buttons button:hover:not(:disabled) { background: #2b2d27; border-color: #c7b58b; }
       .gallery-buttons button:disabled { opacity: 0.35; cursor: default; }
       button:focus-visible, .gallery-track:focus-visible { outline: 2px solid #c7b58b; outline-offset: 4px; }
-      @media (max-width: 500px) { .gallery-slide a { aspect-ratio: 1 / 1; } .gallery-buttons button { padding: 12px; } }
+      @media (max-width: 500px) { .gallery-buttons button { padding: 12px; } }
     </style>
   </head>
   <body>
@@ -102,45 +102,37 @@
       <div class="gallery" role="region" aria-roledescription="carousel" aria-label="NEURO DIVINITY presentation">
         <p class="gallery-hint" id="gallery-help">Swipe or use the arrows to explore. Select an image to see it in full.</p>
         <div class="gallery-track" id="gallery-track" tabindex="0" aria-describedby="gallery-help" aria-label="Project images; use left and right arrow keys">
-          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="1 of 9: Complete packaging">
-            <a href="IG%2006%20Collection.jpg" aria-label="Open full image: Complete packaging"><img src="IG%2006%20Collection.jpg" alt="Album cover, disc and booklet presented together" loading="lazy" decoding="async"></a>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="1 of 5: Complete packaging">
+            <a href="track%20list.jpg" style="aspect-ratio: 3194 / 2255" aria-label="Open full image: Complete packaging"><img src="track%20list.jpg" alt="Overview of the cover, disc, booklet and back packaging" width="3194" height="2255" loading="lazy" decoding="async"></a>
             <figcaption>Complete packaging</figcaption>
           </figure>
-          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="2 of 9: Cover mockup">
-            <a href="CD%20ARTWORK.jpg" aria-label="Open full image: Cover mockup"><img src="CD%20ARTWORK.jpg" alt="The album cover printed on a square sleeve" loading="lazy" decoding="async"></a>
-            <figcaption>Cover mockup</figcaption>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="2 of 5: Album cover">
+            <a href="CD%20ARTWORK.jpg" style="aspect-ratio: 981 / 999" aria-label="Open full image: Album cover"><img src="CD%20ARTWORK.jpg" alt="Square album sleeve with monochrome portrait and neon green details" width="981" height="999" loading="lazy" decoding="async"></a>
+            <figcaption>Album cover</figcaption>
           </figure>
-          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="3 of 9: Cover artwork">
-            <a href="NEURO%20COVERART.jpg" aria-label="Open full image: Cover artwork"><img src="NEURO%20COVERART.jpg" alt="Monochrome portrait, experimental typography and neon green cover details" loading="lazy" decoding="async"></a>
-            <figcaption>Cover artwork</figcaption>
-          </figure>
-          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="4 of 9: Disc design">
-            <a href="CDCD.jpg" aria-label="Open full image: Disc design"><img src="CDCD.jpg" alt="Charcoal CD with white lettering and neon green orbital lines" loading="lazy" decoding="async"></a>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="3 of 5: Disc design">
+            <a href="CDCD.jpg" style="aspect-ratio: 1020 / 1000" aria-label="Open full image: Disc design"><img src="CDCD.jpg" alt="Charcoal disc with white lettering and neon green orbital lines" width="1020" height="1000" loading="lazy" decoding="async"></a>
             <figcaption>Disc design</figcaption>
           </figure>
-          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="5 of 9: Booklet spread">
-            <a href="2PAGE.jpg" aria-label="Open full image: Booklet spread"><img src="2PAGE.jpg" alt="Open booklet showing the concept statement and atom symbol" loading="lazy" decoding="async"></a>
-            <figcaption>Booklet spread</figcaption>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="4 of 5: Booklet interior">
+            <a href="2PAGE.jpg" style="aspect-ratio: 1899 / 1015" aria-label="Open full image: Booklet interior"><img src="2PAGE.jpg" alt="Open booklet with the concept statement, scientific imagery and atom symbol" width="1899" height="1015" loading="lazy" decoding="async"></a>
+            <figcaption>Booklet interior</figcaption>
           </figure>
-          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="6 of 9: Interior presentation">
-            <a href="IG%2003%20Interior.jpg" aria-label="Open full image: Interior presentation"><img src="IG%2003%20Interior.jpg" alt="Booklet interior presented with white space around it" loading="lazy" decoding="async"></a>
-            <figcaption>Interior presentation</figcaption>
-          </figure>
-          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="7 of 9: Back and track list">
-            <a href="CD%20BOOK.jpg" aria-label="Open full image: Back and track list"><img src="CD%20BOOK.jpg" alt="Open packaging with the seven track titles and artist logo" loading="lazy" decoding="async"></a>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="5 of 5: Back and track list">
+            <a href="CD%20BOOK.jpg" style="aspect-ratio: 2154 / 1110" aria-label="Open full image: Back and track list"><img src="CD%20BOOK.jpg" alt="Open back packaging showing the seven track titles and artist logo" width="2154" height="1110" loading="lazy" decoding="async"></a>
             <figcaption>Back and track list</figcaption>
           </figure>
-          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="8 of 9: Back presentation">
-            <a href="IG%2004%20Back.jpg" aria-label="Open full image: Back presentation"><img src="IG%2004%20Back.jpg" alt="The back packaging design presented with white space around it" loading="lazy" decoding="async"></a>
-            <figcaption>Back presentation</figcaption>
-          </figure>
-          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="9 of 9: Full collection details">
-            <a href="track%20list.jpg" aria-label="Open full image: Full collection details"><img src="track%20list.jpg" alt="Wide overview of the cover, back, booklet and disc" loading="lazy" decoding="async"></a>
-            <figcaption>Full collection details</figcaption>
-          </figure>
+
+
+
+
+
+
+
+
         </div>
         <div class="gallery-controls">
-          <p id="gallery-status" aria-live="polite" aria-atomic="true">1 / 9</p>
+          <p id="gallery-status" aria-live="polite" aria-atomic="true">1 / 5</p>
           <div class="gallery-buttons">
             <button type="button" id="gallery-prev" aria-controls="gallery-track" disabled>&larr; Previous</button>
             <button type="button" id="gallery-next" aria-controls="gallery-track">Next &rarr;</button>
@@ -162,6 +154,7 @@
       let scrollFrame;
       function updateGallery() {
         index = Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / track.clientWidth)));
+        track.style.height = Math.ceil(slides[index].getBoundingClientRect().height) + 'px';
         status.textContent = (index + 1) + ' / ' + slides.length;
         previous.disabled = index === 0;
         next.disabled = index === slides.length - 1;
@@ -182,7 +175,10 @@
           goToSlide(index + (event.key === 'ArrowRight' ? 1 : -1));
         }
       });
+      let galleryWidth = 0;
       const galleryResize = new ResizeObserver(() => {
+        if (galleryWidth === track.clientWidth) return;
+        galleryWidth = track.clientWidth;
         track.scrollTo({ left: index * track.clientWidth, behavior: 'instant' });
         updateGallery();
       });
