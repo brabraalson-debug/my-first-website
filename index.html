@@ -78,7 +78,7 @@
       .gallery-slide img { display: block; max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; }
       .gallery-slide figcaption { padding: 16px 0; font-size: 14px; color: #b6b7ae; }
       .gallery-controls { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 16px; }
-      #gallery-status { margin: 0; color: #c7b58b; font-size: 13px; font-variant-numeric: tabular-nums; }
+      .gallery-status { margin: 0; color: #c7b58b; font-size: 13px; font-variant-numeric: tabular-nums; }
       .gallery-buttons { display: flex; gap: 10px; }
       .gallery-buttons button { background: transparent; color: #f2eee6; border: 1px solid #56584e; padding: 12px 16px; min-height: 44px; font: inherit; font-size: 13px; cursor: pointer; }
       .gallery-buttons button:hover:not(:disabled) { background: #2b2d27; border-color: #c7b58b; }
@@ -92,6 +92,15 @@
       .contact-email:hover { color: #c7b58b; }
       .contact-email span { color: #c7b58b; margin-left: 8px; }
       .contact-note { color: #b6b7ae; font-size: 13px; line-height: 1.7; margin: 24px 0 0; }
+      .poster-project { padding-top: 64px; padding-bottom: 80px; }
+      .poster-layout { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+      .poster-context h2 { max-width: 9ch; font-size: clamp(40px, 5vw, 68px); line-height: 1.05; }
+      .poster-tagline { color: #c7b58b; font-family: Georgia, 'Times New Roman', serif; font-size: 22px; line-height: 1.5; margin: 32px 0 0; }
+      .poster-context .project-description { margin-top: 24px; }
+      .poster-detail { color: #b6b7ae; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.8; margin-top: 32px; }
+      .poster-gallery { min-width: 0; }
+      .poster-gallery .gallery-slide a { max-height: 76svh; }
+      @media (max-width: 760px) { .poster-layout { grid-template-columns: 1fr; gap: 24px; } .poster-context h2 { max-width: none; } .poster-project { padding: 40px 0 56px; } }
     </style>
   </head>
   <body>
@@ -139,7 +148,7 @@
 
         </div>
         <div class="gallery-controls">
-          <p id="gallery-status" aria-live="polite" aria-atomic="true">1 / 5</p>
+          <p class="gallery-status" id="gallery-status" aria-live="polite" aria-atomic="true">1 / 5</p>
           <div class="gallery-buttons">
             <button type="button" id="gallery-prev" aria-controls="gallery-track" disabled>&larr; Previous</button>
             <button type="button" id="gallery-next" aria-controls="gallery-track">Next &rarr;</button>
@@ -147,6 +156,46 @@
         </div>
       </div>
       <p class="project-description">&ldquo;Humanity was a trial version.&rdquo; Album artwork and packaging design for a personal drum and bass concept, bringing together the cover, disc and booklet details.</p>
+    </section>
+    <section class="work poster-project" id="prophecy" aria-labelledby="prophecy-title">
+      <p class="role">Selected work / 02</p>
+      <div class="poster-layout">
+        <div class="poster-context">
+          <h2 id="prophecy-title">The Last Prophecy</h2>
+          <p class="project-meta">Personal concept &middot; Poster design</p>
+          <p class="poster-tagline">&ldquo;The future was written before the world began.&rdquo;</p>
+          <p class="project-description">A personal poster study combining medieval-inspired imagery, distressed textures and expressive typography. Four variations explore how color and lettering change the atmosphere of the same concept.</p>
+          <p class="poster-detail">Imagery / Texture / Typography</p>
+        </div>
+        <div class="gallery poster-gallery" role="region" aria-roledescription="carousel" aria-label="The Last Prophecy poster variations">
+          <p class="gallery-hint" id="poster-help">Explore the variations. Select a poster to view it in full.</p>
+          <div class="gallery-track" id="poster-track" tabindex="0" aria-describedby="poster-help" aria-label="Poster images; use left and right arrow keys">
+            <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="1 of 4: Pink and green">
+              <a href="THE%20LAST%20PROPHECY%20Pink%26Green.jpg" style="aspect-ratio: 2766 / 3844" aria-label="Open full poster: Pink and green"><img src="THE%20LAST%20PROPHECY%20Pink%26Green.jpg" alt="Textured pink and green poster with medieval inspired imagery" width="2766" height="3844" loading="lazy" decoding="async"></a>
+              <figcaption>Pink &amp; green</figcaption>
+            </figure>
+            <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="2 of 4: Dark and red">
+              <a href="THE%20LAST%20PROPHECY%20Dark%26Red.jpg" style="aspect-ratio: 3000 / 4000" aria-label="Open full poster: Dark and red"><img src="THE%20LAST%20PROPHECY%20Dark%26Red.jpg" alt="Dark poster with red branching linework and pale title lettering" width="3000" height="4000" loading="lazy" decoding="async"></a>
+              <figcaption>Dark &amp; red</figcaption>
+            </figure>
+            <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="3 of 4: Muted tones">
+              <a href="THE%20LAST%20PROPHECY%20colorless.jpg" style="aspect-ratio: 2766 / 3844" aria-label="Open full poster: Muted tones"><img src="THE%20LAST%20PROPHECY%20colorless.jpg" alt="Poster variation in muted earthy tones" width="2766" height="3844" loading="lazy" decoding="async"></a>
+              <figcaption>Muted tones</figcaption>
+            </figure>
+            <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="4 of 4: Typography study">
+              <a href="THE%20LAST%20PROPHECY%20longTEXT.jpg" style="aspect-ratio: 2766 / 3844" aria-label="Open full poster: Typography study"><img src="THE%20LAST%20PROPHECY%20longTEXT.jpg" alt="Poster with tall condensed title typography over textured imagery" width="2766" height="3844" loading="lazy" decoding="async"></a>
+              <figcaption>Typography study</figcaption>
+            </figure>
+          </div>
+          <div class="gallery-controls">
+            <p class="gallery-status" id="poster-status" aria-live="polite" aria-atomic="true">1 / 4</p>
+            <div class="gallery-buttons">
+              <button type="button" id="poster-prev" aria-controls="poster-track" disabled>&larr; Previous</button>
+              <button type="button" id="poster-next" aria-controls="poster-track">Next &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <p class="role">Get in touch</p>
@@ -159,16 +208,17 @@
     <footer>Alson Braho &mdash; Graphic Designer</footer>
 
     <script>
-      const track = document.getElementById('gallery-track');
+    function setupGallery(trackId, previousId, nextId, statusId) {
+      const track = document.getElementById(trackId);
       const slides = Array.from(track.querySelectorAll('.gallery-slide'));
-      const previous = document.getElementById('gallery-prev');
-      const next = document.getElementById('gallery-next');
-      const status = document.getElementById('gallery-status');
+      const previous = document.getElementById(previousId);
+      const next = document.getElementById(nextId);
+      const status = document.getElementById(statusId);
       let index = 0;
       let scrollFrame;
       function updateGallery() {
         index = Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / track.clientWidth)));
-        track.style.height = Math.ceil(slides[index].getBoundingClientRect().height) + 'px';
+        track.style.height = (Math.ceil(slides[index].getBoundingClientRect().height) + track.offsetHeight - track.clientHeight) + 'px';
         status.textContent = (index + 1) + ' / ' + slides.length;
         previous.disabled = index === 0;
         next.disabled = index === slides.length - 1;
@@ -198,6 +248,9 @@
       });
       galleryResize.observe(track);
       updateGallery();
+    }
+    setupGallery('gallery-track', 'gallery-prev', 'gallery-next', 'gallery-status');
+    setupGallery('poster-track', 'poster-prev', 'poster-next', 'poster-status');
     </script>
   </body>
 </html>
