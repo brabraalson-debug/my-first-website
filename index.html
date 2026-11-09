@@ -23,7 +23,7 @@
         text-transform: uppercase;
         color: #b6b7ae;
       }
-      main {
+      .hero {
         max-width: 1200px;
         margin: 0 auto;
         min-height: 75svh;
@@ -62,14 +62,34 @@
         color: #b6b7ae;
         font-size: 12px;
       }
+      .work { max-width: 1200px; margin: 0 auto; padding: 48px 0 96px; border-top: 1px solid #3a3b36; }
+      h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(32px, 5vw, 56px); margin: 0 0 16px; letter-spacing: -0.03em; }
+      .project-meta { color: #b6b7ae; font-size: 14px; line-height: 1.6; margin: 0 0 32px; }
+      .project-image { display: block; }
+      .project-image img { display: block; width: 100%; height: auto; }
+      .project-description { color: #b6b7ae; font-size: 17px; line-height: 1.7; max-width: 620px; margin: 28px 0 20px; }
+      .image-link { color: #f2eee6; text-underline-offset: 5px; line-height: 1.6; }
+      a:focus-visible { outline: 2px solid #c7b58b; outline-offset: 6px; }
     </style>
   </head>
   <body>
     <header>Portfolio</header>
     <main>
+    <section class="hero" aria-label="Introduction">
       <h1>Alson Braho</h1>
       <p class="role">Graphic Designer</p>
       <p class="intro">Welcome to my portfolio. Explore a selection of my work below.</p>
+    </section>
+    <section class="work" aria-labelledby="work-title">
+      <p class="role">Selected work / 01</p>
+      <h2 id="work-title">NEURO::DIVINITY</h2>
+      <p class="project-meta">Personal concept &middot; Album artwork &amp; packaging</p>
+      <a class="project-image" href="IG%2006%20Collection.jpg" aria-label="View the full NEURO DIVINITY packaging image">
+        <img src="IG%2006%20Collection.jpg" alt="NEURO DIVINITY album packaging with a CD, cover, track list and open booklet in charcoal, white and neon green" width="3194" height="3194" loading="lazy">
+      </a>
+      <p class="project-description">A personal album packaging concept bringing together cover artwork, CD design and a printed booklet.</p>
+      <a class="image-link" href="IG%2006%20Collection.jpg">View full image &nearr;</a>
+    </section>
     </main>
     <footer>Alson Braho &mdash; Graphic Designer</footer>
   </body>
