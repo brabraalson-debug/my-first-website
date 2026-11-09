@@ -85,6 +85,13 @@
       .gallery-buttons button:disabled { opacity: 0.35; cursor: default; }
       button:focus-visible, .gallery-track:focus-visible { outline: 2px solid #c7b58b; outline-offset: 4px; }
       @media (max-width: 500px) { .gallery-buttons button { padding: 12px; } }
+      .contact { max-width: 1200px; margin: 0 auto; padding: clamp(48px, 8vw, 96px) 0; border-top: 1px solid #3a3b36; }
+      .contact h2 { font-size: clamp(38px, 6.5vw, 84px); line-height: 1.1; margin: 0 0 24px; }
+      .contact-intro { color: #b6b7ae; font-size: 18px; line-height: 1.7; margin: 0 0 32px; }
+      .contact-email { display: inline-block; max-width: 100%; color: #f2eee6; font-size: clamp(18px, 3.4vw, 36px); line-height: 1.5; text-decoration-thickness: 1px; text-underline-offset: 8px; overflow-wrap: anywhere; transition: color 160ms ease; }
+      .contact-email:hover { color: #c7b58b; }
+      .contact-email span { color: #c7b58b; margin-left: 8px; }
+      .contact-note { color: #b6b7ae; font-size: 13px; line-height: 1.7; margin: 24px 0 0; }
     </style>
   </head>
   <body>
@@ -140,6 +147,13 @@
         </div>
       </div>
       <p class="project-description">&ldquo;Humanity was a trial version.&rdquo; Album artwork and packaging design for a personal drum and bass concept, bringing together the cover, disc and booklet details.</p>
+    </section>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <p class="role">Get in touch</p>
+      <h2 id="contact-title">Let&rsquo;s create something<br>together.</h2>
+      <p class="contact-intro">Have a project in mind? Tell me about it.</p>
+      <a class="contact-email" href="mailto:madebybraho@gmail.com">madebybraho@gmail.com <span aria-hidden="true">&nearr;</span></a>
+      <p class="contact-note">Email me about your project, a collaboration, or a creative idea.</p>
     </section>
     </main>
     <footer>Alson Braho &mdash; Graphic Designer</footer>
