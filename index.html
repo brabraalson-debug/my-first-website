@@ -101,6 +101,10 @@
       .poster-gallery { min-width: 0; }
       .poster-gallery .gallery-slide a { max-height: 76svh; }
       @media (max-width: 760px) { .poster-layout { grid-template-columns: 1fr; gap: 24px; } .poster-context h2 { max-width: none; } .poster-project { padding: 40px 0 56px; } }
+      .siren-introduction { max-width: 760px; margin-bottom: 32px; }
+      .siren-introduction .project-description { margin: 20px 0 0; }
+      .siren-project .gallery-slide a { background: #000; }
+      .siren-project .gallery-slide:last-child a { background: #151615; }
     </style>
   </head>
   <body>
@@ -197,6 +201,23 @@
         </div>
       </div>
     </section>
+    <section class="work siren-project" id="siren" aria-labelledby="siren-title">
+      <p class="role">Selected work / 03</p>
+      <div class="siren-introduction"><h2 id="siren-title">SIREN.X Clothing</h2><p class="project-meta">Client work &middot; Brand identity concepts</p><p class="project-description">Brand identity concepts developed for a client&rsquo;s fashion brand. The series explores wordmarks, symbols and garment applications, alongside a monochrome illustration direction.</p></div>
+      <div class="gallery" role="region" aria-roledescription="carousel" aria-label="SIREN X Clothing identity concepts">
+        <p class="gallery-hint" id="siren-help">From identity explorations to clothing applications. Swipe or use the arrows; select an image to see it in full.</p>
+        <div class="gallery-track" id="siren-track" tabindex="0" aria-describedby="siren-help" aria-label="Clothing project images; use left and right arrow keys">
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="1 of 7: Identity explorations"><a href="12LOGOS.png" style="aspect-ratio: 5581 / 3508" aria-label="Open full image: Identity explorations"><img src="12LOGOS.png" alt="SIREN X Clothing wordmarks and a family of star and wing symbols" width="5581" height="3508" loading="lazy" decoding="async"></a><figcaption>Identity explorations</figcaption></figure>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="2 of 7: Symbol and wordmark"><a href="siren.xclothinglogo3.png" style="aspect-ratio: 8115 / 3508" aria-label="Open full image: Symbol and wordmark"><img src="siren.xclothinglogo3.png" alt="Sweeping star logo explored on three black T shirt mockups" width="8115" height="3508" loading="lazy" decoding="async"></a><figcaption>Symbol and wordmark</figcaption></figure>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="3 of 7: Wordmark applications"><a href="SIREN.XClogo4.png" style="aspect-ratio: 8115 / 3508" aria-label="Open full image: Wordmark applications"><img src="SIREN.XClogo4.png" alt="SIREN XC lettering and alternate symbol placements on T shirts" width="8115" height="3508" loading="lazy" decoding="async"></a><figcaption>Wordmark applications</figcaption></figure>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="4 of 7: Back print exploration"><a href="SIREN2LOGO.png" style="aspect-ratio: 5434 / 3508" aria-label="Open full image: Back print exploration"><img src="SIREN2LOGO.png" alt="Vertical star symbol applied at two sizes on black T shirts" width="5434" height="3508" loading="lazy" decoding="async"></a><figcaption>Back print exploration</figcaption></figure>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="5 of 7: Star emblem"><a href="SIRENSTARlogo6.png" style="aspect-ratio: 8115 / 3508" aria-label="Open full image: Star emblem"><img src="SIRENSTARlogo6.png" alt="Radiating star emblem explored at different print sizes" width="8115" height="3508" loading="lazy" decoding="async"></a><figcaption>Star emblem</figcaption></figure>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="6 of 7: SXC monogram"><a href="SXClogo5.png" style="aspect-ratio: 8115 / 3508" aria-label="Open full image: SXC monogram"><img src="SXClogo5.png" alt="SXC monogram with a star applied to black T shirts" width="8115" height="3508" loading="lazy" decoding="async"></a><figcaption>SXC monogram</figcaption></figure>
+          <figure class="gallery-slide" role="group" aria-roledescription="slide" aria-label="7 of 7: Lost in Space"><a href="SIREN%20LOST%20IN%20SPACE.png" style="aspect-ratio: 2481 / 3508" aria-label="Open full image: Lost in Space"><img src="SIREN%20LOST%20IN%20SPACE.png" alt="Monochrome astronaut illustration with Lost in Space lettering" width="2481" height="3508" loading="lazy" decoding="async"></a><figcaption>Lost in Space</figcaption></figure>
+        </div>
+        <div class="gallery-controls"><p class="gallery-status" id="siren-status" aria-live="polite" aria-atomic="true">1 / 7</p><div class="gallery-buttons"><button type="button" id="siren-prev" aria-controls="siren-track" disabled>&larr; Previous</button><button type="button" id="siren-next" aria-controls="siren-track">Next &rarr;</button></div></div>
+      </div>
+    </section>
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <p class="role">Get in touch</p>
       <h2 id="contact-title">Let&rsquo;s create something<br>together.</h2>
@@ -251,6 +272,7 @@
     }
     setupGallery('gallery-track', 'gallery-prev', 'gallery-next', 'gallery-status');
     setupGallery('poster-track', 'poster-prev', 'poster-next', 'poster-status');
+    setupGallery('siren-track', 'siren-prev', 'siren-next', 'siren-status');
     </script>
   </body>
 </html>
